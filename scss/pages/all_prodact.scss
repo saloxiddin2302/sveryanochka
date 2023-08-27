@@ -1,0 +1,86 @@
+@import "../_global";
+
+body {
+  background-color: #fbf8ec;
+}
+
+main {
+  padding-top: 150px;
+}
+
+.all-link {
+  @include h1link;
+}
+
+.alert {
+  width: 250px;
+  padding: 15px;
+  background: #cff4fc;
+  color: #055160;
+  border: 1px solid #9eeaf9;
+  border-radius: 7px;
+  margin: 15px 0px 15px 0px;
+}
+
+.products__row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+}
+
+.popular-card {
+  @include popularCard;
+  padding-bottom: 20px;
+  position: relative;
+  .popular-card-body {
+    button {
+      @include likeBtn;
+    }
+  }
+  .popular-card-prices-left,
+  .popular-card-footer-bott {
+    padding-left: 20px;
+    i {
+      padding: 10px 0px 10px 0px;
+      color: #ff6633;
+    }
+    button {
+      @include buttonBas;
+      width: 90%;
+    }
+    button:hover {
+      @include buttonHover;
+    }
+  }
+  .popular-card-prices-left {
+    h3 {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px;
+}
+.active {
+  background: #ff6633;
+  padding: 7px;
+  color: white;
+}
+@media (max-width: 1200px) {
+  .products__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+}
+
+@media (max-width: 600px) {
+  .products__row {
+    grid-template-columns: 1fr;
+    text-align: center !important;
+  }
+}

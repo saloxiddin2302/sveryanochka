@@ -1,0 +1,250 @@
+@import "../_global";
+
+// main-section1
+
+.main-section1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 100px;
+  background-image: url(../../images/index/home-big-bg.png);
+  h1 {
+    @include h1link;
+  }
+}
+// main-section2
+.big-home {
+  background-color: #fbf8ec;
+  padding-top: 100px;
+  .prodacts-content,
+  .novinka-link,
+  .before-buy-link {
+    @include allLink;
+    h1 {
+      @include h1link;
+    }
+    a {
+      @include alink;
+    }
+  }
+  .popular-row,
+  .novinka-row,
+  .before-buy-row {
+    .popular-card-body {
+      position: relative;
+      button {
+        @include likeBtn;
+      }
+    }
+    @include popularRow;
+    .popular-card {
+      @include popularCard;
+      .popular-card-footer {
+        padding: 10px 20px;
+        .popular-card-prices {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h5 {
+            @include font-height;
+            font-size: 16px;
+            color: #606060;
+          }
+          p {
+            @include font-height;
+            font-size: 12px;
+            color: #bfbfbf;
+          }
+        }
+        .popular-card-footer-bott {
+          p {
+            padding-top: 5px;
+          }
+
+          .star-rating5 {
+            color: #ff6633;
+            font-size: 20px;
+          }
+          button {
+            @include buttonBas;
+          }
+          button:hover {
+            @include buttonHover;
+          }
+        }
+      }
+    }
+  }
+  #ofiserr-box {
+    padding-top: 100px;
+    .ofiserr-box-title {
+      h1 {
+        @include h1link;
+      }
+    }
+    .ofiserr-box-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 70px;
+    }
+    .ofiserr-box-left,
+    .ofiserr-box-right {
+      .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #e5ffde;
+        border-radius: 4px;
+        max-width: 584px;
+        height: 200px;
+      }
+      .card:hover {
+        background: #fcd5ba;
+        box-shadow: 0px 8px 16px rgba(202, 147, 96, 0.5);
+        transition: 0.3s ease;
+      }
+      .card-title {
+        padding-left: 30px;
+        align-items: center !important;
+        h2 {
+          @include h1link;
+          font-size: 22px !important;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.tab-map-card-footer {
+  .tab-map-title {
+    h1 {
+      @include h1link;
+    }
+  }
+  .tab {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 150%;
+    gap: 10px;
+    padding-top: 25px;
+    button {
+      @include buttonTab;
+    }
+    .active {
+      background: #70c05b !important;
+      border-radius: 4px !important;
+      color: white;
+    }
+  }
+  .iframe-box {
+    padding-top: 30px;
+    iframe {
+      width: 100%;
+      height: 350px;
+    }
+  }
+  #card-three {
+    padding-top: 70px;
+    .card-three-title {
+      @include allLink;
+      h1 {
+        @include h1link;
+      }
+      a {
+        @include alink;
+      }
+    }
+    .card-three-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 45px;
+      .card-three-card {
+        background: #ffffff;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        padding-bottom: 20px;
+        .card-three-txt {
+          padding-left: 10px;
+          h5 {
+            padding-bottom: 10px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 150%;
+            color: #8f8f8f;
+          }
+          p {
+            padding-top: 10px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: #414141;
+          }
+          button {
+            @include buttonTab;
+            margin-top: 15px;
+          }
+          button:hover {
+            background: #70c05b;
+            color: white;
+            transition: 0.3s ease;
+          }
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// responsive
+@media (max-width: 1200px) {
+  .popular-row,
+  .novinka-row,
+  .before-buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .card-three-cards {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .ofiserr-box-card {
+    gap: 50px;
+  }
+}
+@media (max-width: 768px) {
+  .main-section1 {
+    img {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+  .popular-row,
+  .novinka-row,
+  .before-buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+  .card {
+    height: 350px !important;
+  }
+  .card,
+  .card-body {
+    text-align: center !important;
+    margin: 0 auto !important;
+    flex-wrap: wrap !important;
+  }
+  .card-three-cards {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 550px) {
+  .tab {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}

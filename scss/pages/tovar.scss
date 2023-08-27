@@ -1,0 +1,248 @@
+@import "../_global";
+
+main {
+  padding-top: 150px;
+  .page-link {
+    a {
+      @include alink;
+      margin-left: 10px;
+    }
+    span {
+      margin-left: 15px;
+    }
+  }
+  .h1-link {
+    h1 {
+      @include h1link;
+      padding-top: 15px;
+      font-size: 25px;
+    }
+  }
+  .rating-and-share {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    a {
+      margin-left: 20px;
+    }
+  }
+}
+
+#carousel-img {
+  .carousel-box {
+    display: flex;
+    padding-top: 70px;
+    #show img {
+      width: 500px;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    .indicators {
+      width: 100px;
+    }
+
+    .indicators img {
+      width: 64px;
+      height: 86.4px;
+      margin-top: 25px;
+      background: url(image), #ffffff;
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      object-fit: cover;
+    }
+  }
+}
+
+.caraousel-image-div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .carousel-box-left {
+    .carousel-box-left-txt {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .buy-salary {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: #606060;
+      }
+      span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        color: #bfbfbf;
+      }
+    }
+    .tovar-button-basket {
+      button {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 279px;
+        height: 60px;
+        background: #ff6633;
+        border-radius: 4px;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+    .about-tovar-product {
+      margin-top: 25px;
+      padding: 23px;
+      background: #f3f2f1;
+    }
+  }
+}
+
+.big-home {
+  background-color: #fbf8ec;
+  margin-top: 150px;
+  .prodacts-content,
+  .novinka-link,
+  .before-buy-link {
+    @include allLink;
+    h1 {
+      @include h1link;
+    }
+    a {
+      @include alink;
+    }
+  }
+  .popular-row,
+  .novinka-row,
+  .before-buy-row {
+    .popular-card-body {
+      position: relative;
+      button {
+        @include likeBtn;
+      }
+    }
+    @include popularRow;
+    .popular-card {
+      @include popularCard;
+      .popular-card-footer {
+        padding: 10px 20px;
+        .popular-card-prices {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          h5 {
+            @include font-height;
+            font-size: 16px;
+            color: #606060;
+          }
+          p {
+            @include font-height;
+            font-size: 12px;
+            color: #bfbfbf;
+          }
+        }
+        .popular-card-footer-bott {
+          p {
+            padding-top: 5px;
+          }
+
+          .star-rating5 {
+            color: #ff6633;
+            font-size: 20px;
+          }
+          button {
+            @include buttonBas;
+          }
+          button:hover {
+            @include buttonHover;
+          }
+        }
+      }
+    }
+  }
+  #ofiserr-box {
+    padding-top: 100px;
+    .ofiserr-box-title {
+      h1 {
+        @include h1link;
+      }
+    }
+    .ofiserr-box-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 70px;
+    }
+    .ofiserr-box-left,
+    .ofiserr-box-right {
+      .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #e5ffde;
+        border-radius: 4px;
+        max-width: 584px;
+        height: 200px;
+      }
+      .card:hover {
+        background: #fcd5ba;
+        box-shadow: 0px 8px 16px rgba(202, 147, 96, 0.5);
+        transition: 0.3s ease;
+      }
+      .card-title {
+        padding-left: 30px;
+        align-items: center !important;
+        h2 {
+          @include h1link;
+          font-size: 22px !important;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .popular-row,
+  .novinka-row,
+  .before-buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .caraousel-image-div {
+    flex-wrap: wrap;
+    #show {
+      width: 100%;
+    }
+  }
+  .page-link {
+    text-align: center !important;
+  }
+  .rating-and-share {
+    a {
+      margin: 0 auto !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section1 {
+    img {
+      display: none;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+  .popular-row,
+  .novinka-row,
+  .before-buy-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+}

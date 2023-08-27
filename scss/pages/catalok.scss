@@ -1,0 +1,76 @@
+@import "../_global";
+
+main {
+  padding-top: 150px;
+  .page-link {
+    a {
+      @include alink;
+      margin-left: 10px;
+    }
+    span {
+      margin-left: 15px;
+    }
+  }
+  .h1-link {
+    h1 {
+      @include h1link;
+      padding-top: 50px;
+    }
+  }
+  #prodact-catalok {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    .catalok-card {
+      position: relative;
+      margin-top: 40px;
+      .catalok-card-footer {
+        position: absolute;
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        bottom: 2px;
+        background: linear-gradient(
+          180deg,
+          rgba(112, 192, 91, 0) 0%,
+          #70c05b 82.81%
+        );
+        cursor: pointer;
+        p {
+          position: absolute;
+          bottom: 0;
+          left: 15px;
+          padding-bottom: 15px;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 150%;
+          color: #ffffff;
+        }
+      }
+      .catalok-card-footer:hover {
+        background: linear-gradient(
+          180deg,
+          rgba(255, 102, 51, 0) 0%,
+          #ff6633 100%
+        );
+      }
+      img {
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  #prodact-catalok {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 35px;
+  }
+  .catalok-card {
+    img {
+      width: 100%;
+    }
+  }
+}
