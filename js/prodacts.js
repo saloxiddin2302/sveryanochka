@@ -7,7 +7,7 @@ const prodacts = [
     price: 89,
     rating: 5.1,
     discount: 0,
-    image: "../images/index/before-card1.png",
+    image: window.location.pathname +  "images/index/before-card1.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const prodacts = [
     category2: "Обычная",
     rating: 2,
     discount: 20,
-    image: "../images/index/card-fruit1.png",
+    image: window.location.pathname + "../images/index/card-fruit1.png",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const prodacts = [
     category2: "Обычная",
     rating: 3,
     discount: 20,
-    image: "../images/index/card-malako2.png",
+    image: window.location.pathname + "../images/index/card-malako2.png",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const prodacts = [
     category2: "Обычная",
     rating: 5,
     discount: 20,
-    image: "../images/index/bottle-meat3.png",
+    image: window.location.pathname + "../images/index/bottle-meat3.png",
   },
   {
     name: "Apple",
@@ -230,7 +230,7 @@ const prodacts = [
     category2: "Обычная",
     rating: 4,
     discount: 20,
-    image: "../images/index/bottle2.png",
+    image: window.location.pathname + "../images/index/bottle2.png",
   },
   {
     id: 6,
@@ -240,7 +240,7 @@ const prodacts = [
     price: 91,
     rating: 5.2,
     discount: 50,
-    image: "../images/index/bottle2.png",
+    image: window.location.pathname + "../images/index/bottle2.png",
   },
   {
     id: 7,
@@ -250,7 +250,7 @@ const prodacts = [
     price: 68,
     rating: 5.3,
     discount: 20,
-    image: "../images/index/novinka-card1.png",
+    image: window.location.pathname + "../images/index/novinka-card1.png",
   },
   {
     id: 8,
@@ -260,7 +260,7 @@ const prodacts = [
     price: 61,
     rating: 5.4,
     discount: 20,
-    image: "../images/index/card-malako2.png",
+    image: window.location.pathname + "../images/index/card-malako2.png",
   },
   {
     id: 9,
@@ -270,7 +270,7 @@ const prodacts = [
     price: 98,
     rating: 2,
     discount: 20,
-    image: "../images/index/novinka-card1.png",
+    image: window.location.pathname + "../images/index/novinka-card1.png",
   },
   {
     id: 10,
@@ -280,7 +280,7 @@ const prodacts = [
     price: 79,
     rating: 5,
     discount: 0,
-    image: "../images/index/bottle-meat3.png",
+    image: window.location.pathname + "../images/index/bottle-meat3.png",
   },
   {
     id: 11,
@@ -290,7 +290,7 @@ const prodacts = [
     price: 89,
     rating: 2,
     discount: 50,
-    image: "../images/index/bottle2.png",
+    image: window.location.pathname + "../images/index/bottle2.png",
   },
   {
     id: 12,
@@ -300,7 +300,7 @@ const prodacts = [
     price: 61,
     rating: 2,
     discount: 20,
-    image: "../images/index/card-malako2.png",
+    image: window.location.pathname + "../images/index/card-malako2.png",
   },
 ];
 
@@ -309,81 +309,81 @@ let massive_ofisser = [
     id: 1,
     name: "Оформите карту «Северяночка»",
     about: "И получайте бонусы при покупке в магазинах и на сайте",
-    img: "../images/index/massive2-img1.png",
+    img: window.location.pathname + "../images/index/massive2-img1.png",
   },
   {
     id: 2,
     name: "Покупайте акционные товары",
     about: "И получайте вдвое больше бонусов",
-    img: "../images/index/massive2-img2.png",
+    img: window.location.pathname + "../images/index/massive2-img2.png",
   },
 ];
 
 const catalok_Massiv = [
   {
     id: 0,
-    img: "../images/catalok/catalok1.png",
+    img: window.location.pathname + "../images/catalok/catalok1.png",
     name: "Молоко, сыр, яйцо",
   },
   {
     id: 1,
-    img: "../images/catalok/catalok2.png",
+    img: window.location.pathname + "../images/catalok/catalok2.png",
     name: "Хлеб",
   },
   {
     id: 2,
-    img: "../images/catalok/catalok3.png",
+    img: window.location.pathname + "../images/catalok/catalok3.png",
     name: "Фрукты и овощи",
   },
   {
     id: 3,
-    img: "../images/catalok/catalok4.png",
+    img: window.location.pathname + "../images/catalok/catalok4.png",
     name: "Напитки",
   },
   {
     id: 4,
-    img: "../images/catalok/catalok5.png",
+    img: window.location.pathname + "../images/catalok/catalok5.png",
     name: "Кондитерские изделия",
   },
   {
     id: 5,
-    img: "../images/catalok/catalok6.png",
+    img: window.location.pathname + "../images/catalok/catalok6.png",
     name: "Чай, кофе",
   },
 
   {
     id: 6,
-    img: "../images/catalok/catalok7.png",
+    img: window.location.pathname + "../images/catalok/catalok7.png",
     name: "Бакалея",
   },
   {
     id: 7,
-    img: "../images/catalok/catalok8.png",
+    img: window.location.pathname + "../images/catalok/catalok8.png",
     name: "Здоровое питание",
   },
   {
     id: 8,
-    img: "../images/catalok/catalok9.png",
+    img: window.location.pathname + "../images/catalok/catalok9.png",
     name: "Зоотовары",
   },
   {
     id: 9,
-    img: "../images/catalok/catalok10.png",
+    img: window.location.pathname + "../images/catalok/catalok10.png",
     name: "Фрукты и овощи",
   },
   {
     id: 10,
-    img: "../images/catalok/catalok11.png",
+    img: window.location.pathname + "../images/catalok/catalok11.png",
     name: "Напитки",
   },
   {
     id: 11,
-    img: "../images/catalok/catalok12.png",
+    img: window.location.pathname + "../images/catalok/catalok12.png",
     name: "Кондитерские изделия",
   },
   {
     id: 12,
-    img: "../images/catalok/catalok13.png",
+    img: window.location.pathname + "../images/catalok/catalok13.png",
     name: "Чай, кофе",
   },
 ];
